@@ -1,0 +1,17 @@
+{
+  "name": "gitlab-live-relative-time",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Firefox/Chrome extension: keeps GitLab's relative timestamps live instead of frozen at page load.",
+  "scripts": {
+    "test": "node --test 'test/*.test.mjs'",
+    "lint": "web-ext lint --source-dir . --ignore-files 'node_modules/**' 'web-ext-artifacts/**' 'test/**' 'package.json' 'package-lock.json' 'README.md' '.gitignore'",
+    "build": "web-ext build --source-dir . --artifacts-dir web-ext-artifacts --overwrite-dest --ignore-files 'node_modules/**' 'web-ext-artifacts/**' 'test/**' 'package.json' 'package-lock.json' 'README.md' '.gitignore'",
+    "sign": "web-ext sign --source-dir . --artifacts-dir web-ext-artifacts --channel unlisted --ignore-files 'node_modules/**' 'web-ext-artifacts/**' 'test/**' 'package.json' 'package-lock.json' 'README.md' '.gitignore'",
+    "start": "web-ext run --source-dir . --start-url https://gitlab.com/gitlab-org/gitlab/-/merge_requests"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "web-ext": "^10.6.0"
+  }
+}
