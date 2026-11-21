@@ -2,6 +2,13 @@
 
 GitLab renders relative timestamps ("just now", "3 hours ago") once and never updates them, so a comment posted hours ago still says "just now" if the tab stayed open. This extension rewrites them from the real timestamp so they stay accurate.
 
+### Install (Firefox or Zen)
+
+1. Download the latest signed `.xpi` from the [Releases page](https://github.com/erxand/gitlab-live-relative-time-extension/releases/latest).
+2. Open `about:addons`, click the gear icon, choose "Install Add-on From File…", and pick the downloaded `.xpi`.
+
+The `.xpi` is signed by Mozilla's add-on service, so it installs permanently and survives browser restarts. It is distributed here rather than on addons.mozilla.org.
+
 ### How it works
 
 - Every GitLab relative timestamp is a `<time datetime="...">` element. The `datetime` attribute holds the exact time, the same one the hover tooltip shows.
